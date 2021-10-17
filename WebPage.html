@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Roz</title>
+    <link rel="stylesheet" href="./style3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link href=“http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css” rel=“stylesheet”>
+
+</head>
+
+  <body>
+    <div class ="style">
+
+      <br><br><h1>Roz</h1><br><br>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Roz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="WebPage.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="suggistion.html">Suggistion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Sign.html">Sign In</a>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+                  <li class="nav-item">
+                    <i class="fas fa-shopping-cart"></i>
+                      <a class="nav-link" href="cart.html">My Cart<i class="glyphicon glyphicon-shopping-cart"></i></i>
+                      </i></a>
+                </li>
+                  
+               </ul><br><br>
+  
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+      </nav>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+         
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./r5.jpg" class="d-block w-100" alt="...">
+            </div> 
+            <div class="carousel-item">
+              <img src="./flw9.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        
+<!--End Head-->
+        
+      <br><br><h1> Top seller :</h1><br>
+      <div class= "row justify-ceontent-center p-4 gap-4">
+       <div class="card mb-3 col-3" style="width: 18rem;">
+      <img src="./Flw1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Miss White</h3>
+        <p class="card-text">From SAR 200</p>
+        <a href="#" class="btn btn-primary" onclick="addItems(1)">Add to cart</a>
+      </div>
+      </div>
+  
+  
+       <div class="card mb-3 col-3" style="width: 18rem;">
+      <img src="./flw2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Make me Blush</h3>
+        <p class="card-text">From SAR 380</p>
+        <a href="#" class="btn btn-primary" onclick="addItems(2)">Add to cart</a>
+      </div>
+      </div>
+  
+  
+       <div class="card mb-3 col-3" style="width: 18rem;">
+      <img src="./flw3.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Purple Bouquet</h3>
+        <p class="card-text">From SAR 250</p>
+        <a href="#" class="btn btn-primary" onclick="addItems(3)">Add to cart</a>
+      </div>
+      </div>
+  
+  
+     <div class="card mb-3 col-3" style="width: 18rem;">
+      <img src="./flw4.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Love Bouquet</h3>
+        <p class="card-text">From SAR 499 </p>
+        <a href="#" class="btn btn-primary" onclick="addItems(4)">Add to cart</a>
+      </div>
+     </div>
+  
+  
+     <div class="card mb-3 col-3" style="width: 18rem;">
+      <img src="./flw5.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">Classic Bouquet</h3>
+        <p class="card-text">From SAR 399</p>
+        <a href="#" class="btn btn-primary" onclick="addItems(5)">Add to cart</a>
+      </div>
+     </div>
+  
+  
+     <div class="card mb-3 col-3" style="width: 18rem;">
+     <img src="./flw6.jpg" class="card-img-top" alt="...">
+     <div class="card-body">
+      <h3 class="card-title">The Lush Lady</h3>
+      <p class="card-text">From SAR 450 </p>
+      <a href="#" class="btn btn-primary" onclick="addItems(6)">Add to cart</a>
+     </div>
+       </div>
+
+       <div class="card mb-3 col-3" style="width: 18rem;">
+        <img src="./flw10.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+         <h3 class="card-title">Shy Pink</h3>
+         <p class="card-text">From SAR 345 </p>
+         <a href="#" class="btn btn-primary" onclick="addItems(7)">Add to cart</a>
+        </div>
+          </div>
+
+
+          <div class="card mb-3 col-3" style="width: 18rem;">
+            <img src="./flw11.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+             <h3 class="card-title">Deep Love</h3>
+             <p class="card-text">From SAR 525 </p>
+             <a href="#" class="btn btn-primary" onclick="addItems(8)">Add to cart</a>
+            </div>
+              </div>
+     
+</div> <br><br>
+
+ <!--End Prudact--> 
+ 
+ <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+  <div id="priceToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+    <i class="fa fa-shopping-cart me-2"></i>
+    <strong class="me-auto"> Product added to cart</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body d-flex">
+    Total Price : <h6 id="totalPricePargraph"></h6>
+    </div>
+  </div>
+  </div>
+</div>
+
+ <!--End total-->
+  
+ 
+
+
+      <br><br><h1>About Us</h1>
+      <p>Order flowers for all occasions in Riyadh. 
+        <br> Roz is your favorite destination to order flowers for your loved ones on all occasions.
+        <br> At Roz, we are always keen on preparing the most beautiful flower arrangements to spread happiness and love.
+        <br> We have made sure to provide gift ideas for all occasions.</p><br><br>
+
+
+        <blockquote>
+          <p>It's Amaizing.Have Beautiful flower bouquet and fast delivery.</p>
+          <p><cite>Sara</cite></p>
+        </blockquote><br><br>
+        
+
+
+        <footer>
+          <h6>RozStore 2021<br></h6>
+        </footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="cart.js"></script>
+  </body> 
+</html>
+

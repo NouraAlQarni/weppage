@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style3.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+    <title>Roz</title>
+
+</head>
+
+<body>
+    <div class="style">
+        <br /><br />
+        <h1>Roz</h1>
+        <br /><br /><br />
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Roz</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="WebPage.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="suggistion.html">Suggistions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sign.html">Sign In </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <a class="nav-link" href="cart.html">My Cart<i class="glyphicon glyphicon-shopping-cart"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <br /><br />
+                </div>
+        </nav> 
+        <!--End Head-->
+        <div class="row p-5">
+            <div class="col-8">
+                <div class="product-details mr-2">
+                    <ul class="list-group list-group-flush" id="productsList"></ul>
+                </div>
+
+            </div>
+            <div class="col-4">
+                
+                    <h3>Please Choose a Delivery Optiones:</h3>
+                   
+                    <div class="input-group mb-3">
+                        <label class="radio">
+                            <input type="radio" name="shippingOptions" value="pickup" onclick="handleClick(this);" checked/>
+                            <h6> Pickup </h6></label>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label class="radio">
+                            <input type="radio" name="shippingOptions" value="3days" onclick="handleClick(this);"/>
+                            <h6> Super delivery <br /><small class="text-muted" >arrives in 3 days</small></h6></label>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <label class="radio">
+                            <input type="radio" name="shippingOptions" value="5days" onclick="handleClick(this);"/>
+                            <h6> Store delivery <br /><small class="text-muted">arrives in 5 days</small></h6></label>
+                    </div>
+                    <br />
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose the shipping company:
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Aramex.</a></li>
+                        <li><a class="dropdown-item" href="#">SEMSA.</a></li>
+                    </ul>
+                </div>
+                <br /><br /><br />
+
+                <!--End shipping company-->
+
+                <div class="input-group mb-3">
+                    <input id="discountInput" type="text" class="form-control" aria-label="Recipient's username"
+                        aria-describedby="button-addon2" />
+                    <button class="btn btn-outline-secondary" type="button" onclick="handleClick ()">
+                        Apply
+                    </button>
+                </div>
+
+                <!--End Descaunt-->
+
+
+                <hr class="line" />
+                <div class="sticky-bottom">
+                    <div>
+                        <h6>Subtotal:</h6>
+                        <h6 id="subtotalText">0</h6>
+                    </div>
+                    
+                    <div>
+                        <h6>Shipping:</h6>
+                        <h6 id="shippinglText">0</h6>
+                    </div>
+
+                    <div>
+                        <h6>Discount:</h6>
+                        <h6 id="discountText">0</h6>
+                    </div>
+
+                    <div>
+                        <h6>Total(Incl.VAT):</h6>
+                        <h6 id="totalText">0</h6>
+                    </div>
+
+                    <button class="btn btn-primary btn-block d-flex justify-content-between mt-3"
+                        onclick="confirmOrder();" type="button" data-bs-toggle="modal" data-bs-target="#confirmModal">
+                        <span>confirm Order</span>
+                    </button>
+                </div>
+        
+        <br />
+
+        <br /><br />
+
+        <!--Confirm order-->
+        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h6 class="modal-title" id="confirmModalLabel">Order Confirmation</h6>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+
+					<div class="modal-body" id="orderText"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!--End shipping-->
+
+ 
+
+        <script type="text/javascript" src="cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+            crossorigin="anonymous"></script>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
